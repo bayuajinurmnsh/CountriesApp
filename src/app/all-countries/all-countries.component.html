@@ -1,5 +1,5 @@
 <div class="list-all-countries text-center">
-    <h4> Three Most Populated Countries</h4>
+    <h4> List of All the Countries in Out Database</h4>
     <a *ngFor="let item of countryList | slice:0:3; let i = index" class="btn-all-countries btn btn-success  mx-1" (click)="setFlag('flagAllCountries',item.id)">
             
         {{item.country}}<br>
