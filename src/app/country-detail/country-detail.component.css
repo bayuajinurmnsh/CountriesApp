@@ -1,0 +1,23 @@
+.container {
+  margin-top: 5%;
+
+  width: 400px;
+  height: 100%;
+}
+
+.title {
+  width: 50%;
+  margin-top: 3%;
+  float: left;
+  color: green;
+}
+
+.data {
+  width: 50%;
+  margin-top: 3%;
+  float: right;
+}
+
+.back-btn {
+  margin-top: 2%;
+}

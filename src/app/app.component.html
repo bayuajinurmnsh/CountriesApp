@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 5</title>
+    </head>
+    
+    <body>
+
+        <div class="header">
+            <h2 class="heading-text text-center"> Fun Facts About Countries </h2>
+        </div>        
+    
+        <div class="nav-class text-center">
+            <a class="btn btn-dark mx-1" (click)="changeStatus('home')">Go Back To Homepage</a>
+            <a class="btn btn-dark mx-1" (click)="changeStatus('allcountries')">List of all Countries</a>
+        </div>
+        
+        <div class="content">
+            <app-home *ngIf="homeShow" (newHomeFlagEvent)="setFlag($event)"></app-home>
+            
+            
+            <app-all-countries *ngIf="allCountriesShow" (newAllCountriesFlagEvent)="setFlag($event)"></app-all-countries>
+            
+            
+            <app-country-detail *ngIf="countryDetailShow" [sendFlag]="sendFlag" [sendId]="sendId" (newCountryDetailFlagEvent)="backButton($event)"></app-country-detail>
+
+        </div>
+    </body>
+</html>

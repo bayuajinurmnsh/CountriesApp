@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="header-title">
+        <h3>{{countryList[sendId-1].country}}</h3>
+    </div>
+
+    <div class="row">
+        <div class="title">
+            Capital
+        </div>
+        <div class="data">
+            {{countryList[sendId-1].capital}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="title">
+            Area
+        </div>
+        <div class="data">
+            {{countryList[sendId-1].totalArea | customDecimalInCommas}} <span class="square-sign">&#x33A2; </span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="title">
+            Population
+        </div>
+        <div class="data">
+            {{countryList[sendId-1].population | customDecimalInCommas}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="title">
+            GDP
+        </div>
+        <div class="data">
+            {{countryList[sendId-1].gdp | customDecimalInCommas}} USD
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="title">
+            Currency
+        </div>
+        <div class="data">
+            {{countryList[sendId-1].currency}}
+        </div>
+    </div>
+
+    <button class="back-btn btn btn-danger" (click)="backButton(sendFlag)">Go Back</button>
+
+</div>
+
+
+  <br>
+
+  

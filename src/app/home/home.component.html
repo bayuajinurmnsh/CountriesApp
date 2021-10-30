@@ -1,0 +1,18 @@
+<div class="three-most-populated text-center">
+    <h4> Three Most Populated Countries</h4>
+    <a *ngFor="let item of countryListByPopulation | slice:0:3 ; let i = index" class="btn-home btn btn-default  mx-1" (click)="setFlag('flagHome',item.id)">
+            
+        {{item.country}}<br>
+        {{item.population | customDecimalInCommas}}<br>
+        People
+    </a>
+</div>
+
+<div class="three-most-largest text-center">
+    <h4> Three Largest Countries (Area)</h4>
+    <a *ngFor="let item of countryListByArea | slice:0:3 ; let i = index" class="btn-home2 btn btn-default  mx-1" (click)="setFlag('flagHome',item.id)">
+            
+        {{item.country}}<br>
+        {{item.totalArea | customDecimalInCommas}} <span class="square-sign">&#x33A2; </span>
+    </a>
+</div>
